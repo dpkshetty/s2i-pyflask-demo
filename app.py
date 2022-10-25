@@ -1,11 +1,14 @@
 from flask import Flask
+import platform
+
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    arch = platform.architecture()
     retString = '''<h1>Hello, World ! - Pyflask Demo</h1>
                  <br>
-                 <h1> Running on xyz hardware arch</h1>'''
+                 <h1> Running on $arch hardware arch</h1>'''
     return retString
 
 @app.route('/version')
