@@ -3,7 +3,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return '<h1>Hello, World ! - Pyflask Demo</h1>'
+    retString = '''<h1>Hello, World ! - Pyflask Demo</h1>
+                 <br>
+                 <h1> Running on xyz hardware arch</h1>'''
+    return retString
 
 @app.route('/version')
 def get_version():
