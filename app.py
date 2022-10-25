@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     arch = platform.processor()
-    retString = '<h1>Hello, World ! - Pyflask Demo</h1> running on ' + arch
+    retString = '<h1>Hello, World ! - Pyflask Demo running on {arch} hardware architecture</h1>'
     return retString
 
 @app.route('/version')
